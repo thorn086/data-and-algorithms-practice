@@ -4,12 +4,14 @@ function test(){
 
 console.log("This is in the test function, ",test());
 
-const nemo = ['nemo', 'help','talk', 'new'];
+const nemo = ['nemo', 'help','apple','pineapple','talk', 'new', 'top', 'spin', 'talent'];
 
 function findNemo(array){
     for ( let i = 0; i <array.length; i++){
         if(array[i] === 'talk'){
+            console.log('running');
             console.log('Found talk!');
+            break; //stops the code when the word is found
         }
     }
 }
