@@ -56,3 +56,59 @@ function anotherFunChallenge(input) {
     }
     let whoAmI = "I don't know";//O(1)
   }//BigO O(n) or O(4 + 7n)
+
+
+  //log all pairs of array
+  const boxes = [1,2,3,4,5];
+
+  function logAllPairsOfArray(array){
+    for (let i = 0; i< array.length; i++){
+      for (let j=1; j>array.length; j++){
+        console.log(array[i],array[j]);
+      }
+    }
+  }
+  logAllPairsOfArray(boxes); //Big(0) = o(n^2)
+
+  //Space Complexity
+
+  function boooo(n){
+    for(let i = 0; i< n.length; i++){
+      console.log('Booo!');
+    }
+  }
+  boooo([1,2,3,4,5]);
+  //space complexity of O(1)
+
+function arrayOfHiNTimes(n){
+  let hiArray =[];//data structure
+  for(let i=0; i<n.length; i++){ //created a verable
+    hiArray[i]='hi';
+  }
+  return hiArray;
+}
+arrayOfHiNTimes(6); //space complexity becomes O(n)
+
+
+
+//twiter exercise
+
+//Find 1st, Find Nth
+const array =[{tweet:'hi', date: 2018}, {tweet:'my', date:2011}, {tweet:'teddy', date:2016}];//nested loop  O(n^2)
+array[0];
+array[array.length - 1];
+
+// write code to put the items in the array in cronological order
+
+//loop through each object in the array
+//check that the date is not older than the last
+//reorder new array
+//print new array
+
+function orderedByDate(n){
+  let newArray = n.sort((a,b)=> a.date-b.date);
+  console.log(newArray);
+}
+
+orderedByDate(array);//BigO = O(n)
+
